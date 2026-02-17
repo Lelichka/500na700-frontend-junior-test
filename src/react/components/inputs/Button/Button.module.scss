@@ -9,6 +9,7 @@ $borderWidth: 1px;
 
   position: relative;
   border-radius: 40px;
+
   &:before {
     content: "";
     position: absolute;
@@ -16,9 +17,9 @@ $borderWidth: 1px;
     padding: $borderWidth;
     background-image: gl.$accent-gradient;
     border-radius: inherit;
-    mask:
-      conic-gradient(#000 0 0) content-box exclude,
-      conic-gradient(#000 0 0);
+
+    mask: unquote("conic-gradient(#000 0 0)") content-box exclude,
+    unquote("conic-gradient(#000 0 0)");
   }
 
   &:hover {

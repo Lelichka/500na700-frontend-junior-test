@@ -1,8 +1,8 @@
-import NewsItemSection from "../../sections/NewsItemSection/NewsItemSection.tsx";
+import NewsItemSection from '../../sections/NewsItemSection/NewsItemSection.tsx';
 
 const NewsPage = () => {
-    return (
-        <NewsItemSection/>
-    );
-}
+  return (
+    <NewsItemSection/>
+  );
+};
 export default NewsPage;
