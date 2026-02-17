@@ -1,0 +1,49 @@
+@use "../../../../styles/index.scss" as gl;
+
+.checkbox_wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .checkbox_custom {
+    width: 18px;
+    height: 18px;
+    border: 1px solid;
+    border-image: gl.$accent-gradient 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gl.$background-color-light;
+
+    svg {
+      width: 12px;
+      stroke: white;
+      stroke-width: 4;
+      fill: none;
+      opacity: 0;
+    }
+  }
+}
+
+input:checked + .checkbox_custom {
+  background: gl.$accent-gradient;
+  border-color: transparent;
+
+  svg {
+    opacity: 1;
+  }
+}
+
+.checkbox_label_text {
+  color: gl.$primary-color-light;
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 12px;
+}

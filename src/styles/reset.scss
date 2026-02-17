@@ -1,0 +1,58 @@
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем отступы */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Убираем стандартные стили списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Убираем underline у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Картинки не выходят за пределы контейнера */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследование шрифта */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Убираем дефолтные стили кнопок */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Улучшаем рендеринг текста */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Базовая высота */
+html,
+body {
+  min-height: 100%;
+}
+

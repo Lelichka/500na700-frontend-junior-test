@@ -1,0 +1,17 @@
+@use "../../../../styles/index.scss" as gl;
+
+.input {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid gl.$primary-color-light;
+  outline: none;
+
+  &::placeholder {
+    opacity: 0.5;
+    color: gl.$primary-color-light;
+  }
+
+  &:focus::placeholder {
+    opacity: 1;
+  }
+}

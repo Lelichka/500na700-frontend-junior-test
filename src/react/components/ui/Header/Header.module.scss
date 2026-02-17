@@ -1,0 +1,32 @@
+@use "../../../../styles/index.scss" as gl;
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background-color: gl.$background-color-dark;
+  border-bottom: 1px solid gl.$secondary-color;
+}
+
+.header__container {
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  margin: 0 auto;
+
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+  }
+}
+
+.logo{
+  width: 70px;
+
+  @media (max-width: 480px) {
+    width: 44px;
+  }
+}

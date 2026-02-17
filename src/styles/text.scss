@@ -1,0 +1,41 @@
+@use "./variables.scss" as v;
+@use "./mixins.scss" as m;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+h1 {
+  @include m.text-style(v.$font-size-h1, 600, 1.1);
+  text-transform: uppercase;
+}
+
+h2 {
+  @include m.text-style(v.$font-size-h2, 600, 1.1);
+  text-transform: uppercase;
+}
+
+h3 {
+  @include m.text-style(v.$font-size-h3, 600, 1.1);
+  text-transform: uppercase;
+}
+
+h4 {
+  @include m.text-style(v.$font-size-h4, 600, 1.1);
+  text-transform: uppercase;
+}
+
+p {
+  @include m.text-style(v.$font-size-text, 400, 1.3);
+}
+
+a {
+  @include m.text-style(v.$font-size-link, 500, 1.3);
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+caption {
+  @include m.text-style(v.$font-size-caption, 500, 1.3);
+  text-transform: uppercase;
+}
+

@@ -1,0 +1,8 @@
+@use "../../../styles/index.scss" as gl;
+
+.main_page_title {
+  @media (max-width: 480px) {
+    @include gl.text-style(gl.$font-size-h2, 600, 1.1);
+    text-transform: uppercase;
+  }
+}

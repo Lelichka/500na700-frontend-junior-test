@@ -1,0 +1,80 @@
+@use "../../../../styles/index.scss" as gl;
+
+.news_card {
+  grid-column: span 2;
+
+  @media (max-width: 1024px) {
+    grid-column: span 3;
+  }
+
+  @media (max-width: 768px) {
+    grid-column: span 6;
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100% + 20px);
+    margin: 0 -10px;
+  }
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 22 / 15;
+  }
+
+  &:hover {
+    a {
+      opacity: 1;
+    }
+
+    img {
+      border-radius: 20px;
+    }
+
+    h2{
+      background: gl.$accent-gradient;
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+  }
+}
+
+.news_text_block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    opacity: 0.5;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 10px;
+  }
+}
+
+.news_content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news_card_date {
+  @media (max-width: 480px) {
+    padding: 0 10px;
+  }
+}
+
+.news_card_title {
+  @media (max-width: 480px) {
+    @include gl.text-style(gl.$font-size-h3, 600, 1.1);
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,9 @@
+@use "./variables.scss" as v;
+
+@mixin text-style($size, $weight: 400, $line-height: v.$line-height-default, $color: v.$primary-color-dark) {
+  font-family: v.$font-family-base;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $color;
+}

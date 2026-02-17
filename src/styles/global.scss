@@ -1,0 +1,15 @@
+//@use "scss-reset";
+@use './reset.scss';
+@use "./text.scss";
+@use "./variables.scss" as v;
+@use "./spacing.scss";
+
+body {
+  font-family: v.$font-family-base;
+  font-size: v.$font-size-text;
+  line-height: 1.3;
+  color: v.$primary-color-dark;
+
+  background-color: v.$background-color-dark;
+}
+

@@ -1,0 +1,59 @@
+@use "../../../styles/index.scss" as gl;
+
+.modal_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 100%;
+  max-width: 520px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: gl.$background-color-light;
+  padding: 40px;
+  border-radius: 20px;
+
+  h2{
+    color: gl.$primary-color-light;
+
+    @media (max-width: 480px) {
+      @include gl.text-style(gl.$font-size-h3, 600, 1.1, gl.$primary-color-light);
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 100%;
+    border-radius: 0;
+    padding: 80px 20px;
+  }
+}
+
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close_button {
+  color: gl.$primary-color-light;
+  line-height: 0;
+}
+
+.close_button_icon{
+  width: 23px;
+
+  @media (max-width: 480px) {
+    width: 19px;
+  }
+}
+
+
